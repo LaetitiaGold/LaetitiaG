@@ -1,0 +1,143 @@
+/************************************************
+*   Common                                      *
+************************************************/
+* { 
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.4rem;  /* =14px */
+}
+
+/************************************************
+*   Header                                      *
+************************************************/
+
+
+/************************************************
+*   Main                                      *
+************************************************/
+
+/**** exos  ***/
+section {
+    width: 100%;
+    margin : 20px auto;
+    padding: 10px;
+    border: 2px solid #222;
+    background-color: #8ac4f7;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 100;
+    border-bottom: 1px solid #222;
+}
+
+section a {
+    padding:5px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #444;
+}
+
+input[type="submit"] {
+    border: 2px solid white;
+    color: white;
+    background-color: #666;
+    margin-top: 20px;
+    padding: 5px 15px;
+}
+
+div#customer {
+    float: right;
+    padding: 15px;
+    text-align: right;
+}
+
+hr {
+    margin-top: 380px;
+    clear:both;
+}
+
+img {
+    position:absolute;
+    top: 117.567px;
+    left: 340px;
+    z-index: 0;
+    max-width: 450px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    display: inline-block;
+}
+
+tr>td {
+    text-align: left;
+    padding: 5px 0;
+    vertical-align: middle;
+}
+
+#canvas {
+    position: absolute;
+    z-index: 1000;
+    border: 1px dotted #333;
+}
+
+.colorPallette {
+    border-radius: 50%;
+    border : 1px solid #666;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+#black {
+    background-color: black;
+}
+
+#brown {
+    background-color: rgb(68, 41, 5);
+}
+
+#darkorange {
+    background-color: rgb(206, 65, 30);
+}
+
+#darkyellow {
+    background-color: rgb(245, 214, 79);
+}
+
+#lightgreen {
+    background-color: rgb(20, 136, 20);
+}
+
+#cyan {
+    background-color: rgb(48, 132, 184);
+}
+
+#darkblue {
+    background-color: rgb(2, 63, 63);
+}
+
+#color-picker {
+    width: 112px;
+    height: 112px;    
+    display: inline-block;
+    vertical-align: top;
+}
+
+.color-picker {
+    font-size: 10px;
+    display:inline-block;
+    position:static;
+}
