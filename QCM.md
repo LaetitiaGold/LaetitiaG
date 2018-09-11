@@ -1,139 +1,157 @@
 QUESTIONS DU QCM
 
-1. le nom de l'event js qui permet de detecter rbre Html fini : DOM CONTENT LOADED - 
+1. Le nom de l'event js qui permet de détecter la fin du chargement du DOM : DOMContentLoaded -- ex : document.addEventListener("DOMContentLoaded", function(){}); 
 
-2. detecter un event AJAX avec JS natif : XMLHttpRequest
+2. Détecter un event AJAX avec JS natif : XMLHttpRequest -- ex : var xhr = new XMLHttpRequest();
 
-3. faille XSS déclenche du code côté client en JS qui provient pas du serveur donc d'un utilisateur - htmlspecialchars
---> converti les symboles en code aski avec & (crossdomain ?)
+3. Faille XSS : Déclenche du code côté client en JS qui provient pas du serveur donc d'un utilisateur. 
+    - htmlspecialchars --> converti les symboles en code ascii avec 
 
-4. faille injection SQL attaque côté serveur - DROP DATABASE
+4. Faille injection SQL : Attaque côté serveur en essayant de mettre un ";" dans un formulaire pour écrire ses propres requètes. 
+    - PDO --> Préparer ses requètes et utiliser PDO protège de cette faille.
 
-5. array_key_exists qui permet de vérifier si une key existe dans un tableau
---> différentes fonctions :
- . isset (si variable qui exite ?) 
- . empty (si variable vide ou non ?) 
- . array_key_exists (si la clé de l'array existe ?)
+5. Différentes fonction en PHP permettant de checker une variable : 
+    - isset() : Teste si une variable exite.
+    - empty() : Teste si une variable vide ou non.
+    - array_key_exists() : Teste si une key existe dans un tableau.
 
-6. On peut mettre plusieurs h1 dans un site si le 2ème est dans la nav
+6. On peut mettre plusieurs h1 dans un site si le 2ème est dans la nav.
 
-7. si code JS ouvrire la console et OK !
+7. Si le QCM demande de tester un code JS ouvrir la console ( DANS UNE NOUVELLE PAGE ) et OK !
 
-8. en Jquery comment lancer un requête ajax : get json et $.get $.post $.ajax 
+8. En Jquery comment lancer une requête ajax :
+    - $.getJSON : Récupère un fichier JSON.
+    - $.get : Récupère des infos et en envoie avec la méthode GET.
+    - $.post : Récupère des infos et en envoie avec la méthode POST.
+    - $.ajax : Récupère des infos et en envoie avec la possibilité de passer pas mal d'options. 
 
-9. Reset.css / Normalize.css : standardiser tous les css pour tous les navigateurs
+9. Reset.css / Normalize.css : Permettent de standardiser les css pour tous les navigateurs pour partir de la même base. 
 
-10. PHP - l'héritage : l'héritage multiple pour qu'un enfant puisse hériter de plusieurs parents au lieu d'un seul (fait de pouvoir mettre extends, parent 1, extends parents 2,...)
-Est-ce quele php 5.3 peut-il supporter l'hériatge multiple ? NON ça n'existe pas.
+10. PHP - Héritage : 
+    - L'héritage multiple pour qu'un enfant puisse hériter de plusieurs parents au lieu d'un seul (fait de pouvoir mettre extends, parent 1, parents 2, etc).
+    - Est-ce que le php 5.3 peut-il supporter l'héritage multiple ? NON ça n'existe pas en PHP.
 
-11. différence entre canvas et svg ? Canvas utilise les px et svg utilise du vectoriel (point et calcul mathématique)
+11. Différence entre canvas et svg ? 
+    - Canvas utilise les px.
+    - SVG utilise des vecteurs (points et calculs mathématiques).
 
-12. Toutes les foncrtion d'aggrégation de SQL (SUM, COUNT, AVG(average), ROUND, MIN, MAX)
---> attention à la synt.! 
+12. Toutes les fonctions d'aggrégation de SQL
+    - AVG – Calcule la moyenne d'un jeu de valeurs.
+    - COUNT – Compte les rangées dan sune table ou une vue spécifiée.
+    - MIN – Renvoie la valeur minimum dans un jeu de valeurs.
+    - MAX – Renvoie la valeur maximum dans un jeu de valeurs.
+    - SUM – Calcule une somme de valeurs. 
+        --> Attention à la syntaxe !!!! 
 
-13. Structure de contrôle : (boucle & condition)
---> ...
+13. Structure de contrôle : Boucles & Conditions
 
-14. Quel est le nom de l'orienté objet qui permet decacher les éléments de l'exterieur : private.
-principe du POO : l'hériatge/ abstraction/ surcharge
---> permet de protéger les donnéesdu code extérieur : encapsulation
+14. Quel est le nom de l'orienté objet qui permet de cacher les éléments de l'exterieur : private.
+    Principe du POO : 
+    - Héritage : Le fait qu'une class transmette des propriétés ou méthodes ( public,protected ) à ses enfants.
+    - Abstraction : Permet de définir une class dont les enfants doivent avoir certains prérequis ( ne peut pas être instanciée ).
+    - Surcharge : Le fait de modifier une propriété ou méthode héritée dans un enfant. 
+    - Encapsulation : Permet de protéger les données du code à l'extérieur du scope de la classe.
 
-15. Sérialisation : convertir un tableau ou objet en string (en PHP et JS)
-Rôle du langage : avoir des données sur un certain format pour stockage et pour que les 2 langages puissentparler ebsemble?
-Formats : Json, XML 
+15. Sérialisation : Convertir un tableau ou objet en string (en PHP et JS)
+    Rôle : avoir des données d'un certain format pour stockage et pour que 2 langages ( ou + ) puissent parler ensemble.
+        --> Exemple de formats : Json, XML 
 
-16. Différence entre var () let () et const() dans le scope
+16. Différence entre var, let et const dans le scope
+        - const : Ne peux être modifiée après création et peut être accessible de n'importe où.
+        - var : Si déclarée en global, peut être récupérée et utilisée dans les fonction et autre ( utiliser "global" en php pour la redéclarer ). Si déclarée en local, elle n'est accessible que dans le scope local. 
+        - let : Utilisable seulement dans le scope dans lequel elle à été créée. 
 
-17. Moyen de prendreune tableet de pasavoir besoin de duppliquer dans les mêmes tables :
---> les jointures (associer une clé primaire à une secondaire) 
---> récupérer avec INNER JOIN table de base / la table commune
+17. Moyen de prendre une table et de pas avoir besoin de dupliquer dans les mêmes tables :
+    --> les jointures (associer une clé primaire à une secondaire) 
+    --> récupérer avec INNER JOIN table de base / la table commune
 
-18. Différence entre PHP et PHTML : un controller ou front controler et l'autre template
-Règles décriture : PHP - que du PHP sans fermer la balise
-PHTML - lien de 2 langages 
+18. Différence entre PHP et PHTML :
+    - PHP : un controller ou front controller dans lequel on ne met QUE du PHP. On ne ferme pas la balise "<?php"
+    - PHTML :  un template contenant du PHP ( en syntaxe raccourcie ) et du html.
 
-19. Remplacer une accolade par : pour foreach...
+19. Syntaxe raccourcie : 
+    - On remplace les accolades ouvrantes par ":". 
+    - La balise fermante est remplacée par "endif;", "endfor;", "endforeach;" ou autre.
+        Exemple avec if :
+            <?php if : ?>
+                // trucs
+            <?php else : ?>
+                // autres trucs
+            <?php endif; ?>
 
-20. Objet pour ouvrir une conne PDO
+20. Objet pour ouvrir une connexion à une base de donnée de manière sécurisée : PDO
 
-21. PARSE INT et PARSE FLOAT
+21. Méthodes permettant de passer d'une string à un number en javascript : parseInt(); et parseFloat();
 
-22. Types natif et primaire en JS : String, number, booléen
+22. Types natif et primaire en JS : String, Number, Boolean
 
-23. NULL : vide UNDEFINED : n'existe pas
+23. Null : vide / undefined : n'existe pas
 
-24. Comment savoir si une clé existe dans le local storage : getItem
+24. Comment savoir si une clé existe dans le local storage : getItem()
 
-25. Lire des opérations booléenne genre : true && (false || true) && true && false
---> false
+25. Lire des opérations booléenne.
+     - Exemple : 
+        true && (false || true) && true && false // renvoie false
 
-26. Tous les types de boucle en JS (for, for in, for off, while, do while)
+26. Tous les types de boucle en JS 
+     - for
+     - for in/for off
+     - while
+     - do while
 
-27. Tous les tyes de boucle PHP (for foreach(contient for in, et for off), while, do while) 
+27. Tous les types de boucle PHP 
+     - for 
+     - foreach (contient for in, et for off)
+     - while
+     - do while)
 
 28. Concatenation PHP : .(point)
 
 29. Predicate : permet de mettre son propre algorythme de triage 
---> fonction "sort" permet de trier des tableaux dans un sens (ASC, DESC)
+        --> fonction "sort" permet de trier des tableaux dans un sens (ASC, DESC)
 
-30. Différent moyens de langage un chrono : SET INTERVAL - SET TIME OUT // CLEAR TIME OUT - CLEAR INTERVAL
---> comment lancer et comment arreter
+30. Différent moyens de faire un chrono :
+     - var variable = setInterval(fonction,time); // Exécute "fonction" tous les "time" millisecondes.
+     - var variable = setTimeout(fonction,time); // Exécute "fonction" au bout de "time" millisecondes.
+     - clearTimeout(variable); // Stoppe le timeout "variable"
+     - clearInterval(variable); // Stoppe l'interval "variable"
 
-31. Nom du paramètre f-open pleurieurs paramètre : URL et mode ouveture 
-Créer un fichier si il n'existe pas : W (write)
 
-32. Dans l'implémentationde 9 paramètre du context de draw image à quoi correspondentles paramètres :
-img.src = "ref objet image / coordonnées de l'origne source X / source Y / source Width / source Height / Destination X / Destination Y / Hauteur 
+31. Paramètres de fopen() : URL et mode ouverture 
+     Exemple pour ouvrir ou créer un fichier : fopen("fichier.txt",w);
 
-33. A quoi correspondent MVC : Modèle Vue et Contrôleur 
---> Modèle : front-controller - template (HTML CSS JS) vide de contenu mais avce la forme 
---> Vue : résultat que l'on voit surle navigateur faire - déclencher des firmulaires.
---> Contrôleur : controller PHP 
+32. Les 9 paramètres de drawImage() :
+        drawImage ( 
+            image, 
+            source_x, source_y, 
+            source_width, source_height,
+            destination_x, destination_y,
+            destination_width, destination_height
+        );
 
-34. Nom de la fonction PHP pour changer le nom de la page url coté navigateur : Header
+33. À quoi correspond MVC : Model View Controller 
+        --> Model : Gère les données, la logique et les règles de l'application.
+        --> Vue : Résultat que l'on voit sur le navigateur faire.
+        --> Contrôleur : Accepte les inputs utilisateurs ( formulaires et autres ) et les convertie pour le model ou le view.
 
-35. Différence entre INCLUIDE ET REQUIRE en PHP : 
---> a cause d'un variable non prénsent
+34. Nom de la fonction PHP pour changer le nom de la page url coté navigateur : header("Location:../admin.php");
 
-36. qu'est-ce qu'un Scope ? 
---> Apporter des variable / intérieur d'unefonction
---> GLOBAL (ext. dans les fichiers : les variable)
---> LOCAL (créer à chaque structure de contrle : avec les if)
+35. Différence entre include et require en PHP : 
+     - include 'fichier.php' : insère "fichier.php" pour affichage ou utilisation. Si la page n'est pas trouvée ou inaccessible, elle est ignorée.
+     - require 'fichier.php' : insère "fichier.php" pour affichage ou utilisation. Si la page n'est pas trouvée ou inaccessible, le code est stoppé et une erreur est renvoyée. 
 
---> en JS accès à tous les scopes
+36. Qu'est-ce qu'un Scope ? 
+      - Un scope défini d'où sont accessibles certaines informations.
+            --> Le scope global ( extérieur dans les fichiers : les variables déclarées en dehors de toutes fonctions ).
+            --> Le scope local ( Propre à chaque structure de contrôle ( avec les if ou dans une fonction )).
 
---> en PHP - scope SUPER GLOBAL 
---> $_GET / $_POST / $_SESSION / $_SERVER / $_FILE / $_COOKIE / $_REQUEST / $_ENV / $GLOBALS
+      - En JS une variable globale est accessible dans tous les scopes.
+      - En PHP une variable globale doit être redéclarée dans le scope local via le mot clé 'global'.
+      - En PHP il y a aussi en plus le scope super global :
+            --> $_GET / $_POST / $_SESSION / $_SERVER / $_FILE / $_COOKIE / $_REQUEST / $_ENV / $GLOBALS
 
-37. Function anonyme - ne pourra pas être applé de l'extérieur . Suelemetnau moment ou en a besoin.
---> on peut envoyer en paramètre des focntions. utilité : ne pas réserver un nom pour rien 
---> dans un obket ça s'appelle uneméthode
+37. Fonction anonyme - Ne pourra pas être appelée en dehors de sa déclaration. Seulement au moment où en a besoin.
+    --> on peut envoyer en paramètre des fonctions. utilité : ne pas réserver un nom pour rien 
+    --> dans un objet ça s'appelle une méthode
 
-38. 
-
-39. 
-
-40. 
-
-41. 
-
-42. 
-
-framework : sass less
-mobile : atome (web vue) - cross platefome // adobe phoneGap // appjs
-node js
-react
-angular
-backbonejs
-
-remixjobs
-VPN : PIA
-Gestionnaire de mot de passe : lastpass
-
-Demander pourquoi est-ce qu'ils recherchent un dev ?
-convention de code ? des choses qu'il vafalloir trvailler avant ?
-Rythmesdes deadlines ? Astreinte ?
-
-Pour une demande :
-Définir le nombre d'aller - retour pour un site. 
-Maintenance à payer en abonnement.
+38. Probablilité d'avoir une question sur les selecteurs avancés.
